@@ -41,7 +41,7 @@
         <!-- scan DAO interface -->
         <property name="basePackage" value="com.hand.dao"/>
     </bean>
-
+ 
     
     <!-- 开启注解处理器 -->
     <context:annotation-config/>

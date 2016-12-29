@@ -14,7 +14,7 @@
     <context:component-scan base-package="com.hand.aspect"></context:component-scan>
     <context:component-scan base-package="com.hand.event"></context:component-scan>
     <bean id="ClosedEvent" class="com.hand.event.ClosedEvent"></bean>
-        <!-- 配置事务管理器 -->
+        <!-- 配置事务管理器 --> 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>

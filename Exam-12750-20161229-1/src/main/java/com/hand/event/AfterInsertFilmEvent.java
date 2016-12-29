@@ -9,4 +9,4 @@ public class AfterInsertFilmEvent extends ApplicationEvent{
         this.message=message;
     }
 
-}
+} 

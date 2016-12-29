@@ -14,7 +14,7 @@
     <result column="rating" property="rating" jdbcType="CHAR" />
     <result column="special_features" property="specialFeatures" jdbcType="CHAR" />
     <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP" />
-  </resultMap>
+  </resultMap> 
   <resultMap id="ResultMapWithBLOBs" type="com.hand.entity.Film" extends="BaseResultMap" >
     <result column="description" property="description" jdbcType="LONGVARCHAR" />
   </resultMap>

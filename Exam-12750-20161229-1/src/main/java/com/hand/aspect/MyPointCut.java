@@ -19,20 +19,18 @@ import com.hand.event.BeforeInsertFilmEvent;
 @Aspect  
 @Component
 public class MyPointCut implements ApplicationContextAware{
-	
-    
     private ApplicationContext ctx=null;
     public ApplicationContext getCtx() {
         return ctx;
-    }
+    } 
     public void setCtx(ApplicationContext ctx) {
         this.ctx = ctx;
     }
-	
 	@Pointcut("execution(* com.hand.service.*.*(..))")
 	//@Pointcut(value="")
-	public void mp(){}
-
+	public void mp(){
+	    
+	}
 	@Before(value="mp()")
 	public void before(){
 	    String message="before";

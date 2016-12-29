@@ -3,6 +3,7 @@ package com.hand.test;
 import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.event.ContextStoppedEvent;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.hand.entity.Film;
@@ -26,7 +27,7 @@ public class Test {
         String languageId =scanner.nextLine();
         
         
-        Film film=new Film();
+        Film film=new Film(); 
         film.setTitle(title);
         film.setDescription(description);
         /*film.setRentalDuration(Byte.parseByte("6"));
@@ -38,7 +39,8 @@ public class Test {
         
         System.out.println("插入的行数："+i);
        
-        
+        ContextStoppedEvent contextStoppedEvent = new ContextStoppedEvent(context);
+        context.publishEvent(contextStoppedEvent);
         
     }
 

@@ -12,7 +12,7 @@ public interface FilmMapper {
 
     int deleteByPrimaryKey(Short filmId);
 
-    int insert(Film record);
+    int insert(Film record); 
 
     int insertSelective(Film record);
 

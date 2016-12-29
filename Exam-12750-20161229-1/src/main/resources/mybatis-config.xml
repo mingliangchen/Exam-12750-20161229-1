@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <!-- 配置全局变量 -->
-    <settings>
+    <settings> 
         <!-- 使用 jdbc的 getGenerateKeys to get 数据库自增主键值 -->
         <setting name="useGeneratedKeys" value="true"/>
         <!-- 使用列别名替换列名 默认:true -->

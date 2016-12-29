@@ -8,4 +8,4 @@ import com.hand.entity.FilmExample;
 public interface FilmService {
 	int insertFiml(Film film);
 	
-}
+} 

@@ -13,11 +13,11 @@ public class ClosedEvent implements ApplicationListener<ApplicationEvent> {
     List<String> list = new ArrayList<String>();
     
     public void onApplicationEvent(ApplicationEvent event) {
-        if(event instanceof ContextClosedEvent){
+        if(event instanceof ContextStoppedEvent){
             System.out.println("Context stop");
          }
         
     }
-    
+     
 
 }
