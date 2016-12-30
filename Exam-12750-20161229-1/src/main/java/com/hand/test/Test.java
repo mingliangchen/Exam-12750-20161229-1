@@ -13,9 +13,8 @@ import com.hand.service.FilmService;
 public class Test {
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext
-                (new String[] {"classpath:spring/spring-dao.xml", 
-                        "classpath:spring/spring-service.xml"});
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext
+                (new String[] {"classpath:spring/applicationContext.xml"});
        
         FilmService filmService=(FilmService) context.getBean("filmService");
         Scanner scanner = new Scanner(System.in);
@@ -38,9 +37,8 @@ public class Test {
         int i=filmService.insertFiml(film);
         
         System.out.println("插入的行数："+i);
-       
-        ContextStoppedEvent contextStoppedEvent = new ContextStoppedEvent(context);
-        context.publishEvent(contextStoppedEvent);
+        context.close();
+        
         
     }
 

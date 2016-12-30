@@ -9,11 +9,11 @@ import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextStoppedEvent;
 import org.springframework.stereotype.Component;
 
-public class ClosedEvent implements ApplicationListener<ApplicationEvent> {
+public class ClosedEvent implements ApplicationListener<ContextClosedEvent> {
     List<String> list = new ArrayList<String>();
     
-    public void onApplicationEvent(ApplicationEvent event) {
-        if(event instanceof ContextStoppedEvent){
+    public void onApplicationEvent(ContextClosedEvent event) {
+        if(event instanceof ContextClosedEvent){
             System.out.println("Context stop");
          }
         
